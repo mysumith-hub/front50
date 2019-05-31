@@ -78,4 +78,11 @@ public class DefaultPipelineDAO extends StorageServiceSupport<Pipeline> implemen
     update(id, item);
     return findById(id);
   }
+
+@Override
+public Collection<Pipeline> getPipelines(boolean refresh) {
+	return all(refresh)
+		      .stream()
+		      .collect(Collectors.toList());
+}
 }

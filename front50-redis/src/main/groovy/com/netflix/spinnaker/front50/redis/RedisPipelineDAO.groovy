@@ -105,4 +105,9 @@ class RedisPipelineDAO implements PipelineDAO {
       return false
     }
   }
+
+@Override
+public Collection<Pipeline> getPipelines(boolean refresh) {
+	all(refresh)
+}
 }

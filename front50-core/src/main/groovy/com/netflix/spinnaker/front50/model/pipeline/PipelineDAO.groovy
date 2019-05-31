@@ -23,5 +23,6 @@ import com.netflix.spinnaker.front50.model.ItemDAO
 interface PipelineDAO extends ItemDAO<Pipeline> {
   String getPipelineId(String application, String pipelineName)
   Collection<Pipeline> getPipelinesByApplication(String application)
+  Collection<Pipeline> getPipelines(boolean refresh)
   Collection<Pipeline> getPipelinesByApplication(String application, boolean refresh)
 }
